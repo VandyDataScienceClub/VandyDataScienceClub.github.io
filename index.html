@@ -4,23 +4,68 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+        }
+        form {
+            background: #fff;
+            border-radius: 5px;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            margin: auto;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            text-align: left;
+        }
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
 <body>
     <h1>Welcome to My Website</h1>
     <p>This is a simple static website.</p>
-
-    <form action="https://fabform.io/f/eQa00HN" method="post">
-        <!-- Replace "YOUR_FORM_ENDPOINT" with your actual FabForm form endpoint -->
-
+    
+    <form action="https://fabform.io/f/YOUR_FORM_ENDPOINT" method="post">
         <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required><br>
-
+        <input type="text" id="name" name="name" required>
+        
         <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required><br>
-
+        <input type="email" id="email" name="email" required>
+        
         <label for="message">Message:</label>
-        <textarea id="message" name="message" required></textarea><br>
-
+        <textarea id="message" name="message" required></textarea>
+        
         <input type="submit" value="Submit">
     </form>
 </body>
