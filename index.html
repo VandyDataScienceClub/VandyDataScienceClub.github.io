@@ -15,8 +15,8 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
-            height: 100vh; /* Full height for centering */
+            justify-content: flex-start; /* Align items to the top */
+            min-height: 100vh; /* Minimum height to cover full viewport */
             color: white; /* White text for contrast */
         }
         h1 {
@@ -31,10 +31,10 @@
         }
         .cover-image {
             width: 100%; /* Full width */
-            height: 400px; /* Adjust height as needed */
+            height: 300px; /* Adjust height as needed */
             background-image: url('Untitled design (15).png'); /* Replace with your image URL */
             background-size: cover; /* Cover the entire div */
-            background-position: center; /* Center the image */
+            background-position: bottom center; /* Center the image */
             border-radius: 12px; /* Rounded corners */
             margin-bottom: 20px; /* Space below the cover image */
         }
@@ -43,7 +43,7 @@
             border-radius: 12px; /* Rounded corners */
             padding: 40px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-            max-width: 600px; /* Max width for the form */
+            max-width: 800px; /* Max width for the form */
             width: 90%; /* Responsive width */
             backdrop-filter: blur(10px); /* Blur effect for modern look */
             animation: slideIn 0.5s ease; /* Slide-in animation */
@@ -61,7 +61,7 @@
         .form-title {
             font-family: "Oswald", sans-serif;
             font-size: 1.8em; /* Title size */
-            color: #000000; /* Title color */
+            color: #256384; /* Title color */
             margin-bottom: 30px; /* Space below title */
             margin-top: 50px;
         }
@@ -84,10 +84,11 @@
         input[type="text"],
         input[type="email"],
         textarea {
+            font-family: "Kanit", sans-serif;
             width: 100%; /* Full width for inputs */
             padding: 12px;
             margin: 5px 0 15px; /* More spacing for inputs */
-            border: 2px solid #60a5fa; /* Light blue border */
+            border: 2px solid #256384; /* Light blue border */
             border-radius: 8px; /* Rounded edges */
             box-sizing: border-box;
             font-size: 16px;
@@ -96,12 +97,13 @@
         input[type="text"]:focus,
         input[type="email"]:focus,
         textarea:focus {
-            border-color: #3b82f6; /* Darker blue on focus */
+            border-color: #4fdcff; /* Darker blue on focus */
             outline: none; /* Remove default outline */
             box-shadow: 0 0 5px rgba(59, 130, 246, 0.5); /* Glowing effect on focus */
         }
         input[type="submit"] {
-            background-color: #bad8fc; /* Bright blue */
+            font-family: "Kanit", sans-serif;
+            background-color: #4fdcff; /* Bright blue */
             color: rgb(0, 0, 0);
             padding: 15px 20px; /* More padding for the button */
             border: none;
@@ -121,9 +123,7 @@
     </style>
 </head>
 <body>
-    <h1>Welcome to My Awesome Website</h1>
-    <p>Experience the modern design with our interactive contact form.</p>
-    
+
     <div class="form-container">
         <div class="cover-image"></div> <!-- Cover image div -->
         <div class="form-title">VDS 2024 EM/Dev Application!</div>
@@ -152,3 +152,37 @@
     </div>
 </body>
 </html>
+
+<script>
+    // Function to save data to local storage
+    function saveToLocal() {
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const question1 = document.getElementById('question1').value;
+        const question2 = document.getElementById('question2').value;
+        const question3 = document.getElementById('question3').value;
+
+        localStorage.setItem('name', name);
+        localStorage.setItem('email', email);
+        localStorage.setItem('question1', question1);
+        localStorage.setItem('question2', question2);
+        localStorage.setItem('question3', question3);
+    }
+
+    // Function to load data from local storage
+    function loadFromLocal() {
+        document.getElementById('name').value = localStorage.getItem('name') || '';
+        document.getElementById('email').value = localStorage.getItem('email') || '';
+        document.getElementById('question1').value = localStorage.getItem('question1') || '';
+        document.getElementById('question2').value = localStorage.getItem('question2') || '';
+        document.getElementById('question3').value = localStorage.getItem('question3') || '';
+    }
+
+    // Load saved data when the page loads
+    window.onload = loadFromLocal;
+
+    // Save data when the user types in the input fields
+    document.querySelectorAll('input, textarea').forEach((input) => {
+        input.addEventListener('input', saveToLocal);
+    });
+</script>
