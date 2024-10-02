@@ -49,6 +49,8 @@
             padding: 0;
             margin: 0;
             display: flex;
+            flex-wrap: wrap; /* Allow wrapping on smaller screens */
+            justify-content: center; /* Center the nav items */
         }
         nav ul li {
             margin: 0 15px;
@@ -77,7 +79,8 @@
         }
         .button-group {
             display: flex;
-            justify-content: center; /* Center the buttons */
+            flex-direction: column; /* Stack buttons vertically on smaller screens */
+            align-items: center; /* Center the buttons */
             gap: 20px; /* Space between buttons */
             margin-top: 30px; /* Add some space above the buttons */
         }
@@ -93,6 +96,13 @@
         }
         .button-group a:hover {
             background-color: #fcea85;
+        }
+
+        /* Responsive Styles */
+        @media (min-width: 600px) {
+            .button-group {
+                flex-direction: row; /* Align buttons in a row on larger screens */
+            }
         }
     </style>
 </head>

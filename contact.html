@@ -5,26 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact VDS Exec Team</title>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: "Kanit", sans-serif;
-            background: linear-gradient(70deg, #4fdcff, #fcea85); /* Vibrant gradient background */
+            background: linear-gradient(70deg, #4fdcff, #fcea85);
             margin: 0;
             padding: 20px;
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: flex-start; /* Align items to the top */
-            min-height: 100vh; /* Minimum height to cover full viewport */
-            color: white; /* White text for contrast */
+            justify-content: flex-start;
+            min-height: 100vh;
+            color: white;
         }
         h1 {
             font-family: "Oswald", sans-serif;
-            margin-bottom: 10px;
-            margin-top: 0px;
-            font-size: 2.5em; /* Larger font size */
+            margin: 0 0 10px 0;
+            font-size: 2.5em;
             color: #256384;
+            text-align: center; /* Center the heading */
         }
         nav {
             background-color: #256384;
@@ -41,6 +41,8 @@
             padding: 0;
             margin: 0;
             display: flex;
+            flex-wrap: wrap; /* Allow items to wrap */
+            justify-content: center; /* Center the items */
         }
         nav ul li {
             margin: 0 15px;
@@ -56,15 +58,15 @@
             color: #4fdcff;
         }
         .contact-container {
-            background: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
-            border-radius: 12px; /* Rounded corners */
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 12px;
             padding: 40px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-            max-width: 800px; /* Max width for the contact list */
-            width: 90%; /* Responsive width */
+            max-width: 800px;
+            width: 90%;
             margin: 20px 0 15px;
-            backdrop-filter: blur(10px); /* Blur effect for modern look */
-            animation: slideIn 0.5s ease; /* Slide-in animation */
+            backdrop-filter: blur(10px);
+            animation: slideIn 0.5s ease;
         }
         input[type="button"] {
             font-family: 'Kanit', sans-serif; 
@@ -77,8 +79,7 @@
             font-size: 18px; 
             transition: background-color 0.3s, transform 0.2s;
             display: block; 
-            margin: 40px auto; 
-            margin-bottom: 0;
+            margin: 40px auto 0 auto; 
             width: fit-content; 
         }
         input[type="button"]:hover {
@@ -97,15 +98,35 @@
             }
         }
         .contact-item {
-            margin: 20px 0; /* Space between contact items */
-            font-size: 1.2em; /* Font size for contact info */
-            color: #000; /* Text color */
+            margin: 20px 0;
+            font-size: 1.2em;
+            color: #000;
+            text-align: center; /* Center the contact items */
+        }
+        .contact-item a {
+            color: #256384; /* Default link color */
+            text-decoration: none; /* Remove underline */
+        }
+        .contact-item a:hover {
+            text-decoration: underline; /* Underline on hover */
         }
         .back-link {
-            color: #256384; /* Link color */
-            text-decoration: underline; /* Underlined links */
+            color: #256384;
+            text-decoration: underline;
             margin-top: 20px;
             font-size: larger;
+        }
+        /* Responsive adjustments */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2em; /* Adjust heading size on smaller screens */
+            }
+            nav ul li {
+                margin: 0 10px; /* Reduce margin for smaller screens */
+            }
+            input[type="button"] {
+                font-size: 16px; /* Adjust button font size */
+            }
         }
     </style>
 </head>
@@ -124,30 +145,28 @@
     <div class="contact-container">
         <h1>Contact the VDS Exec Team</h1>
         <div class="contact-item">
-            <a href="mailto:ryan.li@vanderbilt.edu" style="color: #000;">Ryan Li, President</a>
+            <a href="mailto:ryan.li@vanderbilt.edu">Ryan Li, President</a>
         </div>
         <div class="contact-item">
-            <a href="mailto:ankit.janamanchi@vanderbilt.edu" style="color: #000;">Ankit Janamanchi, Vice President</a>
+            <a href="mailto:ankit.janamanchi@vanderbilt.edu">Ankit Janamanchi, Vice President</a>
         </div>
         <div class="contact-item">
-            <a href="mailto:isaac.s.liu@vanderbilt.edu" style="color: #000;">Isaac Liu, Director of Projects</a>
+            <a href="mailto:isaac.s.liu@vanderbilt.edu">Isaac Liu, Director of Projects</a>
         </div>
         <div class="contact-item">
-            <a href="mailto:ann.e.mathew@vanderbilt.edu" style="color: #000;">Ann Mathew, Director of Communications</a>
+            <a href="mailto:ann.e.mathew@vanderbilt.edu">Ann Mathew, Director of Communications</a>
         </div>
         <div class="contact-item">
-            <a href="mailto:isabelle.yang@vanderbilt.edu" style="color: #000;">Isabelle Yang, Director of Finance</a>
+            <a href="mailto:isabelle.yang@vanderbilt.edu">Isabelle Yang, Director of Finance</a>
         </div>
         <div class="contact-item">
-            <a href="mailto:william.j.theodore@vanderbilt.edu" style="color: #000;">Willy Theodore, Co-Director of Workshops</a>
+            <a href="mailto:william.j.theodore@vanderbilt.edu">Willy Theodore, Co-Director of Workshops</a>
         </div>
         <div class="contact-item">
-            <a href="mailto:nathaniel.t.dalbert@vanderbilt.edu" style="color: #000;">Nate D'Albert, Co-Director of Workshops</a>
+            <a href="mailto:nathaniel.t.dalbert@vanderbilt.edu">Nate D'Albert, Co-Director of Workshops</a>
         </div>
         
         <input type="button" value="Back to Home" onclick="window.location.href='index.html'">
     </div>
-
 </body>
 </html>
-

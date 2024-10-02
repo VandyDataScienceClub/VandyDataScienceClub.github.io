@@ -19,6 +19,7 @@ body {
     min-height: 100vh;
     color: white;
 }
+
 @keyframes slideIn {
     from {
         opacity: 0;
@@ -29,6 +30,7 @@ body {
         transform: translateY(0);
     }
 }
+
 nav {
     background-color: #256384;
     width: 100%;
@@ -39,15 +41,20 @@ nav {
     top: 0;
     z-index: 1000;
 }
+
 nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
     display: flex;
+    flex-wrap: wrap; /* Allow items to wrap */
+    justify-content: center; /* Center items */
 }
+
 nav ul li {
-    margin: 0 15px;
+    margin: 0 10px; /* Reduced margin for smaller devices */
 }
+
 nav ul li a {
     font-family: "Kanit", sans-serif;
     color: #ffffff;
@@ -55,28 +62,32 @@ nav ul li a {
     font-size: 1.2em;
     transition: color 0.3s;
 }
+
 nav ul li a:hover {
     color: #4fdcff;
 }
+
 .cover-image {
     width: 100%; /* Full width */
-    height: 400px; /* Adjust height as needed */
+    height: 500px; /* Increased height for the cover image */
     background-image: url('Screenshot 2024-10-01 at 11.40.31 PM.png'); /* Replace with your image URL */
     background-size: cover; /* Cover the entire div */
     background-position: bottom center; /* Center the image */
     margin: 5px 0 15px;
     border-radius: 12px; /* Rounded corners */
-    margin-bottom: 20px; /* Space below the cover image */
     animation: slideIn 0.5s ease; /* Slide-in animation */
 }
+
 h1 {
     margin-bottom: 10px;
     color: #256384;
     font-size: 2.5em;
 }
+
 h2 {
     color: #256384;
 }
+
 .welcome-section {
     background-color: rgba(255, 255, 255, 0.8);
     border-radius: 12px;
@@ -88,17 +99,20 @@ h2 {
     text-align: center;
     animation: slideIn 0.5s ease; /* Slide-in animation */
 }
+
 .welcome-section p {
     font-family: "Kanit", sans-serif;
     font-size: 1.2em;
     color: #000000;
 }
+
 .button-group {
     display: flex;
-    justify-content: center; /* Center the buttons */
-    gap: 20px; /* Space between buttons */
+    flex-direction: column; /* Stack buttons on smaller screens */
+    align-items: center; /* Center buttons */
     margin-top: 20px; /* Add some space above the buttons */
 }
+
 .button-group a {
     background-color: #4fdcff;
     color: #256384;
@@ -108,9 +122,35 @@ h2 {
     font-size: 1.2em;
     border-radius: 8px;
     transition: background-color 0.3s;
+    margin: 5px 0; /* Space between buttons */
 }
+
 .button-group a:hover {
     background-color: #fcea85;
+}
+
+/* Responsive styles */
+@media (min-width: 600px) {
+    .button-group {
+        flex-direction: row; /* Arrange buttons in a row on larger screens */
+        justify-content: center; /* Center buttons in row layout */
+        flex-wrap: wrap; /* Allow buttons to wrap if necessary */
+    }
+    .button-group a {
+        margin: 10px; /* Margin for buttons when in row */
+    }
+}
+
+@media (max-width: 400px) {
+    h1 {
+        font-size: 2em; /* Smaller font size for smaller screens */
+    }
+    h2 {
+        font-size: 1.5em; /* Smaller font size for smaller screens */
+    }
+    .welcome-section p {
+        font-size: 1em; /* Smaller font size for smaller screens */
+    }
 }
 </style>
 </head>
@@ -140,7 +180,7 @@ h2 {
     
     <!-- Application Cycle Section -->
     <h2>Application Cycle for 2024-2025</h2>
-    <p>Join us for the upcoming year by exploring our projects, working on the coding challenge, and submitting the general application form:</p>
+    <p>Interested in joining VDS? Explore our projects, work on our coding challenge, and submit the general application form:</p>
     
     <div class="button-group">
         <a href="projects.html">View Projects</a>

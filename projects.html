@@ -25,6 +25,8 @@
             padding: 20px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
             margin-bottom: 20px;
+            width: 100%;
+            box-sizing: border-box;
         }
         @keyframes slideIn {
             from {
@@ -45,11 +47,10 @@
             width: 90%;
             backdrop-filter: blur(10px);
             margin: 20px 0 15px;
-            border-radius: 8px;
             box-sizing: border-box;
             font-size: 16px;
             transition: border-color 0.3s, box-shadow 0.3s;
-            animation: slideIn 0.5s ease; /* Slide-in animation */
+            animation: slideIn 0.5s ease;
         }
         nav {
             background-color: #256384;
@@ -67,6 +68,8 @@
             padding: 0;
             margin: 0;
             display: flex;
+            flex-wrap: wrap; /* Allow wrapping for smaller screens */
+            justify-content: center;
         }
         nav ul li {
             margin: 0 15px;
@@ -131,6 +134,28 @@
         input[type="button"]:hover {
             background-color: #fcea85; 
             transform: scale(1.05); 
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 600px) {
+            nav ul {
+                flex-direction: column; /* Stack navigation items vertically */
+                align-items: center; /* Center navigation items */
+            }
+            nav ul li {
+                margin: 10px 0; /* Adjust margin for vertical layout */
+            }
+            .projects-container {
+                padding: 20px; /* Reduce padding on smaller screens */
+            }
+            .project {
+                padding: 15px; /* Increase padding for better touch targets */
+                margin-bottom: 15px; /* Adjust margin */
+            }
+            input[type="button"] {
+                font-size: 16px; /* Reduce font size for button */
+                padding: 10px 15px; /* Adjust button padding */
+            }
         }
     </style>
 </head>

@@ -9,36 +9,36 @@
     <style>
         body {
             font-family: "Oswald", sans-serif;
-            background: linear-gradient(70deg, #4fdcff, #fcea85); /* Vibrant gradient background */
+            background: linear-gradient(70deg, #4fdcff, #fcea85);
             margin: 0;
             padding: 20px;
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: flex-start; /* Align items to the top */
-            min-height: 100vh; /* Minimum height to cover full viewport */
-            color: white; /* White text for contrast */
+            justify-content: flex-start;
+            min-height: 100vh;
+            color: white;
         }
         h1 {
             font-family: "Oswald", sans-serif;
             margin-bottom: 10px;
-            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6); /* Bold shadow for depth */
-            font-size: 2.5em; /* Larger font size */
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6);
+            font-size: 2.5em;
         }
         p {
             margin-bottom: 30px;
             font-size: 1.2em;
         }
         .form-container {
-            background: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
-            border-radius: 12px; /* Rounded corners */
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 12px;
             padding: 40px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
             margin: 20px 0 15px;
-            max-width: 800px; /* Max width for the form */
-            width: 90%; /* Responsive width */
-            backdrop-filter: blur(10px); /* Blur effect for modern look */
-            animation: slideIn 0.5s ease; /* Slide-in animation */
+            max-width: 800px;
+            width: 90%;
+            backdrop-filter: blur(10px);
+            animation: slideIn 0.5s ease;
         }
         nav {
             background-color: #256384;
@@ -55,6 +55,8 @@
             padding: 0;
             margin: 0;
             display: flex;
+            flex-wrap: wrap; /* Wrap navigation items on smaller screens */
+            justify-content: center; /* Center the nav items */
         }
         nav ul li {
             margin: 0 15px;
@@ -81,75 +83,110 @@
         }
         .form-title {
             font-family: "Oswald", sans-serif;
-            font-size: 1.8em; /* Title size */
-            color: #256384; /* Title color */
-            margin-bottom: 30px; /* Space below title */
+            font-size: 1.8em;
+            color: #256384;
+            margin-bottom: 30px;
             margin-top: 0px;
         }
         .form-description {
             font-family: "Kanit", sans-serif;
             font-weight: 200;
             font-style: normal;
-            font-size: 1.1em; /* Description size */
-            color: #000000; /* Description color */
-            margin-bottom: 30px; /* Space below description */
-    
+            font-size: 1.1em;
+            color: #000000;
+            margin-bottom: 30px;
         }
         label {
             font-family: "Kanit", sans-serif;
             display: block;
             margin: 15px 0 5px;
             text-align: left;
-            color: #000000; /* Consistent blue */
+            color: #000000;
         }
         input[type="text"],
         input[type="email"],
-        input[type="text"],
         textarea {
             font-family: "Kanit", sans-serif;
-            width: 100%; /* Full width for inputs */
+            width: 100%;
             padding: 12px;
-            margin: 5px 0 15px; /* More spacing for inputs */
-            border: 2px solid #256384; /* Light blue border */
-            border-radius: 8px; /* Rounded edges */
+            margin: 5px 0 15px;
+            border: 2px solid #256384;
+            border-radius: 8px;
             box-sizing: border-box;
             font-size: 16px;
-            transition: border-color 0.3s, box-shadow 0.3s; /* Smooth transitions */
+            transition: border-color 0.3s, box-shadow 0.3s;
         }
         input[type="text"]:focus,
         input[type="email"]:focus,
-        input[type="text"]:focus,
         textarea:focus {
-            border-color: #4fdcff; /* Darker blue on focus */
-            outline: none; /* Remove default outline */
-            box-shadow: 0 0 5px rgba(59, 130, 246, 0.5); /* Glowing effect on focus */
+            border-color: #4fdcff;
+            outline: none;
+            box-shadow: 0 0 5px rgba(59, 130, 246, 0.5);
         }
         textarea {
-            resize: vertical; /* Allow vertical resizing */
-            min-height: 100px; /* Minimum height for the textarea */
+            resize: vertical;
+            min-height: 100px;
         }
         .button-container {
             display: flex;
-            justify-content: center; /* Align the buttons in the center */
-            gap: 20px; /* Adds space between the buttons */
+            justify-content: center; /* Center buttons horizontally */
+            gap: 20px; /* Space between buttons */
+            flex-wrap: wrap; /* Wrap buttons on smaller screens */
         }
         input[type="submit"],
         input[type="button"] {
             font-family: "Kanit", sans-serif;
-            background-color: #4fdcff; /* Bright blue */
+            background-color: #4fdcff;
             color: #256384;
-            padding: 15px 20px; /* More padding for the button */
+            padding: 15px 20px;
             border: none;
             border-radius: 8px;
             cursor: pointer;
             font-size: 18px;
-            transition: background-color 0.3s, transform 0.2s; /* Transition for effects */
-            width: auto; /* Adjust width to fit the content */
+            transition: background-color 0.3s, transform 0.2s;
+            width: auto;
+            min-width: 200px; /* Ensure buttons have a minimum width */
         }
         input[type="submit"]:hover,
         input[type="button"]:hover {
-            background-color: #fcea85; /* Darker blue on hover */
-            transform: scale(1.05); /* Slightly larger on hover */
+            background-color: #fcea85;
+            transform: scale(1.05);
+        }
+
+        /* Media query for smaller screens */
+        @media (max-width: 600px) {
+            .form-container {
+                padding: 20px; /* Reduce padding on smaller screens */
+            }
+            h1 {
+                font-size: 2em; /* Adjust heading size */
+            }
+            .form-title {
+                font-size: 1.5em; /* Adjust title size */
+            }
+            input[type="submit"],
+            input[type="button"] {
+                min-width: 150px; /* Smaller minimum width for buttons */
+                font-size: 16px; /* Smaller font size */
+            }
+        }
+
+        /* Additional media query for even smaller devices */
+        @media (max-width: 400px) {
+            h1 {
+                font-size: 1.8em; /* Further adjust heading size */
+            }
+            .form-title {
+                font-size: 1.4em; /* Further adjust title size */
+            }
+            .form-description {
+                font-size: 1em; /* Smaller font size for description */
+            }
+            input[type="submit"],
+            input[type="button"] {
+                min-width: 120px; /* Adjust minimum width for buttons */
+                font-size: 14px; /* Adjust button font size */
+            }
         }
     </style>
 </head>
@@ -184,11 +221,10 @@
             <label for="major">Major(s)/minor(s):</label>
             <input type="text" id="major" name="major" required>
             
-            <label for="question1">How have your academic and/or extracurricular experiences contributed to your interest in data science? </label>
+            <label for="question1">How have your academic and/or extracurricular experiences contributed to your interest in Data Science?</label>
             <textarea id="question1" name="question1" required></textarea>
 
-            <label for="question2">What unique skills or perspectives do you bring that could help Vanderbilt Data Science
-                 grow in new ways?</label>
+            <label for="question2">What unique skills or perspectives do you bring that could help VDS grow in new ways?</label>
             <textarea id="question2" name="question2" required></textarea>
 
             <label for="question3">What aspects of data science are you most passionate about?</label>
