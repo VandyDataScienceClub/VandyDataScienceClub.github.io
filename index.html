@@ -83,6 +83,7 @@
         }
         input[type="text"],
         input[type="email"],
+        input[type="text"],
         textarea {
             font-family: "Kanit", sans-serif;
             width: 100%; /* Full width for inputs */
@@ -96,6 +97,7 @@
         }
         input[type="text"]:focus,
         input[type="email"]:focus,
+        input[type="text"]:focus,
         textarea:focus {
             border-color: #4fdcff; /* Darker blue on focus */
             outline: none; /* Remove default outline */
@@ -139,6 +141,9 @@
             
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" required>
+
+            <label for="major">Major(s)/minor(s):</label>
+            <input type="text" id="major" name="major" required>
             
             <label for="question1">Question 1: How have your academic and/or extracurricular experiences contributed to your interest in data science? </label>
             <textarea id="question1" name="question1" required></textarea>
@@ -168,12 +173,14 @@
     function saveToLocal() {
         const name = document.getElementById('name').value;
         const email = document.getElementById('email').value;
+        const major = document.getElementById('major').value;
         const question1 = document.getElementById('question1').value;
         const question2 = document.getElementById('question2').value;
         const question3 = document.getElementById('question3').value;
 
         localStorage.setItem('name', name);
         localStorage.setItem('email', email);
+        localStorage.setItem('major', major);
         localStorage.setItem('question1', question1);
         localStorage.setItem('question2', question2);
         localStorage.setItem('question3', question3);
@@ -183,6 +190,7 @@
     function loadFromLocal() {
         document.getElementById('name').value = localStorage.getItem('name') || '';
         document.getElementById('email').value = localStorage.getItem('email') || '';
+        document.getElementById('major').value = localStorage.getItem('major') || '';
         document.getElementById('question1').value = localStorage.getItem('question1') || '';
         document.getElementById('question2').value = localStorage.getItem('question2') || '';
         document.getElementById('question3').value = localStorage.getItem('question3') || '';
