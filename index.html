@@ -101,13 +101,6 @@
             outline: none; /* Remove default outline */
             box-shadow: 0 0 5px rgba(59, 130, 246, 0.5); /* Glowing effect on focus */
         }
-        input[type="file"] {
-            width: 100%; /* Make the file input match the width of other elements */
-            margin-bottom: 20px; /* Add space below the file input */
-            padding: 10px;
-            border: none;
-            border-radius: 8px;
-        }
         input[type="submit"] {
             font-family: "Kanit", sans-serif;
             background-color: #4fdcff; /* Bright blue */
@@ -138,6 +131,8 @@
             The questions below are meant to supplement the coding challenge and give us some insight into who you are, what gets you excited about data science, 
             and why you might be the perfect fit for VDS. Please don't hesitate to contact us with any questions or concerns you might have regarding the 
             application process – we are always here to help! </div>
+            <a href="projects.html" style="color: #256384; text-decoration: underline; margin-top: 20px; font-size: larger;">View VDS Projects for 2024</a>
+
         <form action="https://fabform.io/f/eQa00HN" method="post">
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required>
@@ -161,9 +156,6 @@
 
             <label for="question4">Share the link to your coding challenge repository below!</label>
             <textarea id="question4" name="question4" required></textarea>
-
-            <label for="pdfUpload">Attach a PDF of your coding challenge write-up:</label>
-            <input type="file" id="pdfUpload" name="pdfUpload" accept=".pdf" required>
             
             <input type="submit" value="Submit">
         </form>
