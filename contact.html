@@ -25,6 +25,35 @@
             font-size: 2.5em; /* Larger font size */
             color: #256384;
         }
+        nav {
+            background-color: #256384;
+            width: 100%;
+            padding: 15px 0;
+            display: flex;
+            justify-content: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            font-family: "Kanit", sans-serif;
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 1.2em;
+            transition: color 0.3s;
+        }
+        nav ul li a:hover {
+            color: #4fdcff;
+        }
         .contact-container {
             background: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
             border-radius: 12px; /* Rounded corners */
@@ -77,7 +106,16 @@
     </style>
 </head>
 <body>
-
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="application_form.html">Application</a></li>
+            <li><a href="https://github.com/VandyDataScience/coding-challenge-FA24">Coding Challenge</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
     <div class="contact-container">
         <h1>Contact the VDS Exec Team</h1>
         <div class="contact-item">
@@ -89,7 +127,7 @@
         <div class="contact-item">
             <a href="mailto:ann.e.mathew@vanderbilt.edu" style="color: #000;">Ann Mathew, Director of Communications</a>
         </div>
-        <input type="button" value="Back to Application Form" onclick="window.location.href='index.html'">
+        <input type="button" value="Back to Home" onclick="window.location.href='index.html'">
     </div>
 
 </body>

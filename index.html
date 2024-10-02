@@ -1,206 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VDS 2024 Application</title>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: "Oswald", sans-serif;
-            background: linear-gradient(70deg, #4fdcff, #fcea85); /* Vibrant gradient background */
-            margin: 0;
-            padding: 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: flex-start; /* Align items to the top */
-            min-height: 100vh; /* Minimum height to cover full viewport */
-            color: white; /* White text for contrast */
-        }
-        h1 {
-            font-family: "Oswald", sans-serif;
-            margin-bottom: 10px;
-            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6); /* Bold shadow for depth */
-            font-size: 2.5em; /* Larger font size */
-        }
-        p {
-            margin-bottom: 30px;
-            font-size: 1.2em;
-        }
-        .cover-image {
-            width: 100%; /* Full width */
-            height: 300px; /* Adjust height as needed */
-            background-image: url('Screenshot 2024-10-01 at 11.40.31 PM.png'); /* Replace with your image URL */
-            background-size: cover; /* Cover the entire div */
-            background-position: bottom center; /* Center the image */
-            border-radius: 12px; /* Rounded corners */
-            margin-bottom: 20px; /* Space below the cover image */
-        }
-        .form-container {
-            background: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
-            border-radius: 12px; /* Rounded corners */
-            padding: 40px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-            max-width: 800px; /* Max width for the form */
-            width: 90%; /* Responsive width */
-            backdrop-filter: blur(10px); /* Blur effect for modern look */
-            animation: slideIn 0.5s ease; /* Slide-in animation */
-        }
-        @keyframes slideIn {
-            from {
-                opacity: 0;
-                transform: translateY(-20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        .form-title {
-            font-family: "Oswald", sans-serif;
-            font-size: 1.8em; /* Title size */
-            color: #256384; /* Title color */
-            margin-bottom: 30px; /* Space below title */
-            margin-top: 50px;
-        }
-        .form-description {
-            font-family: "Kanit", sans-serif;
-            font-weight: 200;
-            font-style: normal;
-            font-size: 1.1em; /* Description size */
-            color: #000000; /* Description color */
-            margin-bottom: 30px; /* Space below description */
-    
-        }
-        label {
-            display: block;
-            margin: 15px 0 5px;
-            text-align: left;
-            font-weight: bold;
-            color: #000000; /* Consistent blue */
-        }
-        input[type="text"],
-        input[type="email"],
-        input[type="text"],
-        textarea {
-            font-family: "Kanit", sans-serif;
-            width: 100%; /* Full width for inputs */
-            padding: 12px;
-            margin: 5px 0 15px; /* More spacing for inputs */
-            border: 2px solid #256384; /* Light blue border */
-            border-radius: 8px; /* Rounded edges */
-            box-sizing: border-box;
-            font-size: 16px;
-            transition: border-color 0.3s, box-shadow 0.3s; /* Smooth transitions */
-        }
-        input[type="text"]:focus,
-        input[type="email"]:focus,
-        input[type="text"]:focus,
-        textarea:focus {
-            border-color: #4fdcff; /* Darker blue on focus */
-            outline: none; /* Remove default outline */
-            box-shadow: 0 0 5px rgba(59, 130, 246, 0.5); /* Glowing effect on focus */
-        }
-        input[type="submit"] {
-            font-family: "Kanit", sans-serif;
-            background-color: #4fdcff; /* Bright blue */
-            color: rgb(0, 0, 0);
-            padding: 15px 20px; /* More padding for the button */
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            font-size: 18px;
-            transition: background-color 0.3s, transform 0.2s; /* Transition for effects */
-        }
-        input[type="submit"]:hover {
-            background-color: #fcea85; /* Darker blue on hover */
-            transform: scale(1.05); /* Slightly larger on hover */
-        }
-        textarea {
-            resize: vertical; /* Allow vertical resizing */
-            min-height: 100px; /* Minimum height for the textarea */
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vanderbilt Data Science Club</title>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+<style>
+body {
+    font-family: "Oswald", sans-serif;
+    background: linear-gradient(70deg, #4fdcff, #fcea85);
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    color: white;
+}
+nav {
+    background-color: #256384;
+    width: 100%;
+    padding: 15px 0;
+    display: flex;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+nav ul li {
+    margin: 0 15px;
+}
+nav ul li a {
+    font-family: "Kanit", sans-serif;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: color 0.3s;
+}
+nav ul li a:hover {
+    color: #4fdcff;
+}
+.cover-image {
+    width: 100%; /* Full width */
+    height: 400px; /* Adjust height as needed */
+    background-image: url('Screenshot 2024-10-01 at 11.40.31 PM.png'); /* Replace with your image URL */
+    background-size: cover; /* Cover the entire div */
+    background-position: bottom center; /* Center the image */
+    border-radius: 12px; /* Rounded corners */
+    margin-bottom: 20px; /* Space below the cover image */
+}
+h1 {
+    margin-bottom: 10px;
+    color: #256384;
+    font-size: 2.5em;
+}
+.welcome-section {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 12px;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    color: black;
+    margin-top: 20px;
+    text-align: center;
+}
+.welcome-section p {
+    font-family: "Kanit", sans-serif;
+    font-size: 1.2em;
+    color: #000000;
+}
+</style>
 </head>
 <body>
 
-    <div class="form-container">
-        <div class="cover-image"></div> <!-- Cover image div -->
-        <div class="form-title">VDS 2024 EM/Dev Application!</div>
-        <div class="form-description">We are so excited that you are interested in applying to Vanderbilt Data Science this year! 
-            The questions below are meant to supplement the coding challenge and give us some insight into who you are, what gets you excited about data science, 
-            and why you might be the perfect fit for VDS. Please don't hesitate to <a href="contact.html" style="color: #256384; text-decoration: underline;">contact us</a> with any questions or concerns you might have regarding the 
-            application process – we are always here to help! </div>
-            <a href="projects.html" style="color: #256384; text-decoration: underline; margin-top: 20px; font-size: larger;">View VDS Projects for 2024</a>
+<!-- Navigation Bar -->
+<nav>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="application_form.html">Application</a></li>
+        <li><a href="https://github.com/VandyDataScience/coding-challenge-FA24">Coding Challenge</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+</nav>
 
-        <form action="https://fabform.io/f/eQa00HN" method="post">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-            
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
+<!-- Welcome Section -->
+<div class="cover-image"></div>
+<div class="welcome-section">
+    <h1>Welcome to Vanderbilt Data Science!</h1>
+    <p>
+        Vanderbilt Data Science (VDS) is a community for students passionate about leveraging data-driven insights to solve real-world problems. 
+        We offer hands-on projects, coding challenges, and opportunities for students to collaborate and grow in the field of data science. 
+        Whether you're experienced in data science or just starting out, VDS welcomes you to join us on this exciting journey!
+    </p>
+</div>
 
-            <label for="major">Major(s)/minor(s):</label>
-            <input type="text" id="major" name="major" required>
-            
-            <label for="question1">Question 1: How have your academic and/or extracurricular experiences contributed to your interest in data science? </label>
-            <textarea id="question1" name="question1" required></textarea>
-
-            <label for="question2">Question 2: What unique skills or perspectives do you bring that could help Vanderbilt Data Science
-                 grow in new ways?</label>
-            <textarea id="question2" name="question2" required></textarea>
-
-            <label for="question3">Question 3: What aspects of data science are you most passionate about?</label>
-            <textarea id="question3" name="question3" required></textarea>
-
-            <label for="question4">Question 4: What project are you most 
-                interested in working on with VDS this year? Why? </label>
-            <textarea id="question4" name="question4" required></textarea>
-
-            <label for="question4">Share the link to your coding challenge repository below!</label>
-            <textarea id="question4" name="question4" required></textarea>
-            
-            <input type="submit" value="Submit">
-        </form>
-    </div>
 </body>
 </html>
-
-<script>
-    // Function to save data to local storage
-    function saveToLocal() {
-        const name = document.getElementById('name').value;
-        const email = document.getElementById('email').value;
-        const major = document.getElementById('major').value;
-        const question1 = document.getElementById('question1').value;
-        const question2 = document.getElementById('question2').value;
-        const question3 = document.getElementById('question3').value;
-
-        localStorage.setItem('name', name);
-        localStorage.setItem('email', email);
-        localStorage.setItem('major', major);
-        localStorage.setItem('question1', question1);
-        localStorage.setItem('question2', question2);
-        localStorage.setItem('question3', question3);
-    }
-
-    // Function to load data from local storage
-    function loadFromLocal() {
-        document.getElementById('name').value = localStorage.getItem('name') || '';
-        document.getElementById('email').value = localStorage.getItem('email') || '';
-        document.getElementById('major').value = localStorage.getItem('major') || '';
-        document.getElementById('question1').value = localStorage.getItem('question1') || '';
-        document.getElementById('question2').value = localStorage.getItem('question2') || '';
-        document.getElementById('question3').value = localStorage.getItem('question3') || '';
-    }
-
-    // Load saved data when the page loads
-    window.onload = loadFromLocal;
-
-    // Save data when the user types in the input fields
-    document.querySelectorAll('input, textarea').forEach((input) => {
-        input.addEventListener('input', saveToLocal);
-    });
-</script>
