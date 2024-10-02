@@ -62,6 +62,9 @@ h1 {
     color: #256384;
     font-size: 2.5em;
 }
+h2 {
+    color: #256384;
+}
 .welcome-section {
     background-color: rgba(255, 255, 255, 0.8);
     border-radius: 12px;
@@ -76,6 +79,25 @@ h1 {
     font-family: "Kanit", sans-serif;
     font-size: 1.2em;
     color: #000000;
+}
+.button-group {
+    display: flex;
+    justify-content: center; /* Center the buttons */
+    gap: 20px; /* Space between buttons */
+    margin-top: 20px; /* Add some space above the buttons */
+}
+.button-group a {
+    background-color: #4fdcff;
+    color: #256384;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-family: "Kanit", sans-serif;
+    font-size: 1.2em;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+.button-group a:hover {
+    background-color: #fcea85;
 }
 </style>
 </head>
@@ -98,9 +120,19 @@ h1 {
     <h1>Welcome to Vanderbilt Data Science!</h1>
     <p>
         Vanderbilt Data Science (VDS) is a student-run organization for students who are passionate about leveraging data-driven solutions real-world problems impacting the community. 
-        We offer hands-on projects, workshops, and opportunities for students to collaborate and grow in the field of data science while learning essential skills for a successful career. 
+        We offer hands-on projects, workshops, and opportunities for students to collaborate and grow while learning essential skills for a successful career in the data science field. 
         Whether you're experienced in data science or just starting out, VDS welcomes you!
     </p>
+    
+    <!-- Application Cycle Section -->
+    <h2>Application Cycle for 2024-2025 is Open!</h2>
+    <p>Join us for the upcoming year by exploring our projects, working on the coding challenge, and submitting the general application form:</p>
+    
+    <div class="button-group">
+        <a href="projects.html">View Projects</a>
+        <a href="https://github.com/VandyDataScience/coding-challenge-FA24">Coding Challenge</a>
+        <a href="application_form.html">General Application</a>
+    </div>
 </div>
 
 </body>
