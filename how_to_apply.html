@@ -97,6 +97,58 @@
         .button-group a:hover {
             background-color: #fcea85;
         }
+        /* Popup Container */
+        .popup {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: rgba(37, 99, 132, 0.9); /* Popup background */
+            padding: 20px; /* Padding inside the popup */
+            border-radius: 12px; /* Rounded corners */
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Box shadow */
+            display: none; /* Hidden by default */
+            z-index: 2000;
+            max-width: 250px; /* Max width for the popup */
+        }
+
+        /* Popup Content */
+        .popup-content {
+            font-family: "Oswald", sans-serif; /* Title font */
+            font-size: larger; /* Font size */
+            color: white; /* Text color */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px; /* Adjust the padding inside the popup */
+        }
+
+        /* Popup Buttons Container */
+        .popup-buttons {
+            display: flex;
+            justify-content: center; /* Center buttons */
+            gap: 10px; /* Add spacing between the buttons */
+            width: 100%; /* Ensure the buttons container takes up full width */
+            margin-top: 10px; /* Space above the buttons */
+        }
+
+        /* Popup Buttons */
+        .popup-button {
+            background-color: #4fdcff; /* Button background color */
+            color: #256384; /* Button text color */
+            padding: 10px 20px; /* Padding inside buttons */
+            border: none; /* Remove button border */
+            border-radius: 5px; /* Rounded corners for buttons */
+            cursor: pointer; /* Pointer cursor on hover */
+            font-family: "Kanit", sans-serif; /* Button font */
+            font-size: 1em; /* Button font size */
+            transition: background-color 0.3s; /* Transition effect */
+        }
+
+        /* Button hover effect */
+        .popup-button:hover {
+            background-color: #fcea85; /* Hover background color */
+        }
 
         /* Responsive Styles */
         @media (min-width: 600px) {
@@ -157,6 +209,34 @@
         <a href="application_form.html">View General Application</a>
     </div>
 </div>
+
+    <!-- GroupMe Popup -->
+    <div id="groupme-popup" class="popup">
+        <div class="popup-content">
+            <p>JOIN OUR GROUPME!</p>
+            <div class="popup-buttons">
+                <button id="join-btn" class="popup-button"><strong>Join!</strong></button>
+                <button id="close-btn" class="popup-button">No Thanks.</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Show the popup immediately when the page loads
+        window.onload = function() {
+            document.getElementById('groupme-popup').style.display = 'block';
+        };
+        
+        // Close the popup when "No Thanks" is clicked
+        document.getElementById('close-btn').addEventListener('click', function() {
+            document.getElementById('groupme-popup').style.display = 'none';
+        });
+        
+        // Handle "Join" button
+        document.getElementById('join-btn').addEventListener('click', function() {
+            window.location.href = 'https://groupme.com/join_group/103556929/WF0nPDj7'; // Replace with your GroupMe join link
+        });
+        </script>
 
 </body>
 </html>
