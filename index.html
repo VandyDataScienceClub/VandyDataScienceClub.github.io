@@ -47,7 +47,7 @@ nav ul {
     padding: 0;
     margin: 0;
     display: flex;
-    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+    flex-wrap: wrap;
     justify-content: center;
 }
 nav ul li {
@@ -65,14 +65,14 @@ nav ul li a:hover {
 }
 
 .cover-image {
-    width: 100%; /* Full width */
-    height: 500px; /* Increased height for the cover image */
-    background-image: url('Screenshot 2024-10-01 at 11.40.31 PM.png'); /* Replace with your image URL */
-    background-size: cover; /* Cover the entire div */
-    background-position: bottom center; /* Center the image */
+    width: 100%;
+    height: 500px;
+    background-image: url('Screenshot 2024-10-01 at 11.40.31 PM.png');
+    background-size: cover;
+    background-position: bottom center;
     margin: 5px 0 15px;
-    border-radius: 12px; /* Rounded corners */
-    animation: slideIn 0.5s ease; /* Slide-in animation */
+    border-radius: 12px;
+    animation: slideIn 0.5s ease;
 }
 
 h1 {
@@ -94,7 +94,7 @@ h2 {
     color: black;
     margin-top: 20px;
     text-align: center;
-    animation: slideIn 0.5s ease; /* Slide-in animation */
+    animation: slideIn 0.5s ease;
 }
 
 .welcome-section p {
@@ -105,9 +105,9 @@ h2 {
 
 .button-group {
     display: flex;
-    flex-direction: column; /* Stack buttons on smaller screens */
-    align-items: center; /* Center buttons */
-    margin-top: 20px; /* Add some space above the buttons */
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
 }
 
 .button-group a {
@@ -119,94 +119,102 @@ h2 {
     font-size: 1.2em;
     border-radius: 8px;
     transition: background-color 0.3s;
-    margin: 5px 0; /* Space between buttons */
+    margin: 5px 0;
 }
 
 .button-group a:hover {
     background-color: #fcea85;
 }
 
-/* Popup Container */
 .popup {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color: rgba(37, 99, 132, 0.9); /* Popup background */
-    padding: 20px; /* Padding inside the popup */
-    border-radius: 12px; /* Rounded corners */
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Box shadow */
-    display: none; /* Hidden by default */
+    background-color: rgba(37, 99, 132, 0.9);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    display: none;
     z-index: 2000;
-    max-width: 250px; /* Max width for the popup */
+    max-width: 250px;
 }
 
-/* Popup Content */
 .popup-content {
-    font-family: "Oswald", sans-serif; /* Title font */
-    font-size: larger; /* Font size */
-    color: white; /* Text color */
+    font-family: "Oswald", sans-serif;
+    font-size: larger;
+    color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    padding: 10px; /* Adjust the padding inside the popup */
+    padding: 10px;
 }
 
-/* Popup Buttons Container */
 .popup-buttons {
     display: flex;
-    justify-content: center; /* Center buttons */
-    gap: 10px; /* Add spacing between the buttons */
-    width: 100%; /* Ensure the buttons container takes up full width */
-    margin-top: 10px; /* Space above the buttons */
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    margin-top: 10px;
 }
 
-/* Popup Buttons */
 .popup-button {
-    background-color: #4fdcff; /* Button background color */
-    color: #256384; /* Button text color */
-    padding: 10px 20px; /* Padding inside buttons */
-    border: none; /* Remove button border */
-    border-radius: 5px; /* Rounded corners for buttons */
-    cursor: pointer; /* Pointer cursor on hover */
-    font-family: "Kanit", sans-serif; /* Button font */
-    font-size: 1em; /* Button font size */
-    transition: background-color 0.3s; /* Transition effect */
+    background-color: #4fdcff;
+    color: #256384;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: "Kanit", sans-serif;
+    font-size: 1em;
+    transition: background-color 0.3s;
 }
 
-/* Button hover effect */
 .popup-button:hover {
-    background-color: #fcea85; /* Hover background color */
+    background-color: #fcea85;
 }
 
-/* Responsive styles */
+/* Overlay for the deadline popup */
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 3000;
+    display: none;
+}
+
 @media (min-width: 600px) {
     .button-group {
-        flex-direction: row; /* Arrange buttons in a row on larger screens */
-        justify-content: center; /* Center buttons in row layout */
-        flex-wrap: wrap; /* Allow buttons to wrap if necessary */
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
     }
     .button-group a {
-        margin: 10px; /* Margin for buttons when in row */
+        margin: 10px;
     }
 }
 
 @media (max-width: 400px) {
     h1 {
-        font-size: 2em; /* Smaller font size for smaller screens */
+        font-size: 2em;
     }
     h2 {
-        font-size: 1.5em; /* Smaller font size for smaller screens */
+        font-size: 1.5em;
     }
     .welcome-section p {
-        font-size: 1em; /* Smaller font size for smaller screens */
+        font-size: 1em;
     }
 }
 </style>
 </head>
 <body>
 
-<!-- Navigation Bar -->
 <nav>
     <ul>
         <li><a href="index.html" style="color: #4fdcff;">Home</a></li>
@@ -219,7 +227,6 @@ h2 {
     </ul>
 </nav>
 
-<!-- Welcome Section -->
 <div class="cover-image"></div>
 <div class="welcome-section">
     <h1>Welcome to Vanderbilt Data Science!</h1>
@@ -229,7 +236,6 @@ h2 {
         Whether you're experienced in data science or just starting out, VDS welcomes you!
     </p>
     
-    <!-- Application Cycle Section -->
     <h2>APPLICATIONS FOR 2024-2025 ARE OPEN!</h2>
     <p>Interested in joining VDS? Explore our <a href="projects.html" style="color: #256384;">projects</a> 
         and <a href="roles.html" style="color: #256384;">roles</a>, work on our coding challenge, and submit 
@@ -239,6 +245,14 @@ h2 {
         <a href="how_to_apply.html">How To Apply</a>
         <a href="https://github.com/VandyDataScience/coding-challenge-FA24">Coding Challenge</a>
         <a href="application_form.html">General Application</a>
+    </div>
+</div>
+
+<!-- Deadline Extension Popup -->
+<div id="deadline-popup" class="popup-overlay">
+    <div class="popup-content">
+        <p>APPLICATIONS FOR VDS 2024 HAVE BEEN EXTENDED TO 10/24: APPLY TODAY!!</p>
+        <button id="acknowledge-btn" class="popup-button"><strong>Got it!</strong></button>
     </div>
 </div>
 
@@ -254,19 +268,26 @@ h2 {
 </div>
 
 <script>
-// Show the popup immediately when the page loads
 window.onload = function() {
-    document.getElementById('groupme-popup').style.display = 'block';
+    // Check if the user has acknowledged the deadline popup
+    if (!localStorage.getItem('deadlineAcknowledged')) {
+        document.getElementById('deadline-popup').style.display = 'flex'; // Show the deadline extension popup
+    }
+
+    document.getElementById('groupme-popup').style.display = 'block'; // Show the GroupMe popup
 };
 
-// Close the popup when "No Thanks" is clicked
 document.getElementById('close-btn').addEventListener('click', function() {
     document.getElementById('groupme-popup').style.display = 'none';
 });
 
-// Handle "Join" button
 document.getElementById('join-btn').addEventListener('click', function() {
     window.location.href = 'https://groupme.com/join_group/103556929/WF0nPDj7'; // Replace with your GroupMe join link
+});
+
+document.getElementById('acknowledge-btn').addEventListener('click', function() {
+    document.getElementById('deadline-popup').style.display = 'none'; // Hide the deadline popup
+    localStorage.setItem('deadlineAcknowledged', 'true'); // Store acknowledgment in localStorage
 });
 </script>
 
