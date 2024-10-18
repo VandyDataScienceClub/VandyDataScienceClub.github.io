@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Office Hours - Vanderbilt Data Science Club</title>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: "Kanit", sans-serif;
+            background: linear-gradient(70deg, #4fdcff, #fcea85);
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            min-height: 100vh;
+            color: black;
+        }
+        h1, h2 {
+            font-family: "Oswald", sans-serif;
+            color: #256384;
+            margin-top: 0px;
+        }
+        nav {
+            background-color: #256384;
+            width: 100%;
+            padding: 15px 0;
+            display: flex;
+            justify-content: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            font-family: "Kanit", sans-serif;
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 1.2em;
+            transition: color 0.3s;
+        }
+        nav ul li a:hover {
+            color: #4fdcff;
+        }
+        .content-section {
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 12px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+            margin: 20px 0 15px;
+            width: 100%;
+            max-width: 800px;
+            text-align: left;
+            animation: slideIn 0.5s ease;
+        }
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            font-size: 1.1em;
+        }
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 2px solid #256384;
+        }
+        th {
+            font-size: larger;
+            background-color: #256384;
+            color: white;
+            font-family: "Oswald", sans-serif;
+        }
+        td {
+            background-color: rgba(255, 255, 255, 0.6);
+        }
+        tr:hover td {
+            background-color: #fcea85;
+        }
+    </style>
+</head>
+<body>
+ <!-- Navigation Bar -->
+<nav>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="roles.html">Roles</a></li>
+        <li><a href="how_to_apply.html">How to Apply</a></li>
+        <li><a href="application_form.html">Application</a></li>
+        <li><a href="https://github.com/VandyDataScience/coding-challenge-FA24">Coding Challenge</a></li>
+        <li><a href="office_hours.html" style="color: #4fdcff;">Office Hours</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+</nav>
+
+<!-- Office Hours Section -->
+<div class="content-section">
+    <h2>Exec Team Office Hours</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Member</th>
+                <th>Day</th>
+                <th>Time</th>
+                <th>Location</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Ryan</td>
+                <td>Saturday, 10/19</td>
+                <td>12:30-2:30 PM</td>
+                <td>Rand</td>
+            </tr>
+            <tr>
+                <td>Ryan</td>
+                <td>Sunday, 10/20</td>
+                <td>1:00 PM - 2:00 PM</td>
+                <td>Alumni Hall</td>
+            </tr>
+            <tr>
+                <td>Ann</td>
+                <td>Sunday, 10/20</td>
+                <td>3:00 PM - 5:00 PM</td>
+                <td>FGH Design Studio</td>
+            </tr>
+            <tr>
+                <td>Willy</td>
+                <td>Tuesday, 10/22</td>
+                <td>10:30 AM-12:30 PM</td>
+                <td>Stevenson 1115</td>
+            </tr>
+            <tr>
+                <td>Ankit</td>
+                <td>Wednesday, 10/23</td>
+                <td>11:00 AM - 1:00 PM</td>
+                <td>Rand</td>
+            </tr>
+            <tr>
+                <td>Isabelle</td>
+                <td>TBD</td>
+                <td>TBD</td>
+                <td><a href="#" style="color: #256384;">Virtual (Zoom)</a></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+</body>
+</html>
