@@ -25,7 +25,7 @@
             color: #256384;
             margin-bottom: 30px;
             margin-top: 0px;
-            font-weight: 400; /* Change to a bolder weight */
+            font-weight: 400;
         }
         nav {
             background-color: #256384;
@@ -96,13 +96,41 @@
             background-color: #256384;
             color: white;
             font-family: "Oswald", sans-serif;
-            font-weight: 400; /* Change to a bolder weight */
+            font-weight: 400;
         }
         td {
             background-color: rgba(255, 255, 255, 0.6);
         }
         tr:hover td {
             background-color: #fcea85;
+        }
+
+        /* Responsive styles */
+        @media (max-width: 600px) {
+            h1, h2 {
+                font-size: 1.5em; /* Adjust heading size */
+            }
+            .content-section {
+                padding: 20px; /* Reduce padding on smaller screens */
+            }
+            table {
+                font-size: 1em; /* Reduce font size for the table */
+            }
+            th, td {
+                padding: 10px; /* Reduce padding in table cells */
+            }
+        }
+
+        @media (max-width: 400px) {
+            h1, h2 {
+                font-size: 1.3em; /* Further adjust heading size */
+            }
+            table {
+                font-size: 0.9em; /* Further reduce font size for very small screens */
+            }
+            th, td {
+                padding: 8px; /* Further reduce padding in table cells */
+            }
         }
     </style>
 </head>
